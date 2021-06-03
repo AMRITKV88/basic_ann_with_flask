@@ -1,4 +1,4 @@
-FROM python:latest
+FROM python:3.8
 
 LABEL maintainer="er.akverma8@gmail.com"
 

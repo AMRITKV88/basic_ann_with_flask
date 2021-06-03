@@ -1,6 +1,8 @@
-keras
+Keras==2.4.3
 sklearn
 numpy
 pandas
+tensorflow==2.4
 flask
+matplotlib
 

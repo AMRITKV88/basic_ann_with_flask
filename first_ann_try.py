@@ -2,8 +2,10 @@
 # To add a new markdown cell, type '# %% [markdown]'
 import numpy as np
 import pandas as pd 
-import keras
 import matplotlib.pyplot as plt
+from keras.models import Sequential
+from keras.layers import Dense
+from sklearn.metrics import confusion_matrix, accuracy_score
 
 def run_ann():
     # Load Dataset - Which gives data of a person with class label whether the customer will leave the bank or not
@@ -38,10 +40,6 @@ def run_ann():
     x_train  = sc.fit_transform(x_train)
     x_test = sc.transform(x_test)
 
-    import keras
-    from keras.models import Sequential
-    from keras.layers import Dense
-
     # building classifier blueprint.
     classifier = Sequential()
 
@@ -72,7 +70,6 @@ def run_ann():
     # print(final_comparison)
 
     # building Confusion Matrix
-    from sklearn.metrics import confusion_matrix, accuracy_score
     conf_mtx = confusion_matrix(y_test, y_pred)
     # print(conf_mtx)
     test_accuracy = accuracy_score(y_test, y_pred)
