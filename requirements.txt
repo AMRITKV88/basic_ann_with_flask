@@ -1,0 +1,6 @@
+keras
+sklearn
+numpy
+pandas
+flask
+
